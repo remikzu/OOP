@@ -5,7 +5,7 @@ namespace ACM.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer(): this(0)
         {
 
         }
@@ -13,7 +13,14 @@ namespace ACM.BL
         {
             CustomerId = customerId;
             InstanceCount += 1;
+            AddressList = new List<Address>();
         }
+
+        public List<Address> AddressList { get; set; }
+        // Lub, 
+        // public Address WorkAddress { get; set; }
+        // public Address HomeAddress { get; set; }
+        public CustomerType CustomerType { get; set; }
         public int CustomerId { get; private set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }

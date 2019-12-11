@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    enum AddressType
+    public enum AddressType
     {
         HomeAddress,
         WorkAddress,
