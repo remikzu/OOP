@@ -27,11 +27,29 @@ namespace ACM.BL
             return new List<Product>();
         }
 
-        public bool Save()
+        public bool Save(Product product)
         {
-            // TODO
+            var success = true;
 
-            return true;
+            if (product.HasChanges)
+            {
+                if (product.isValid)
+                {
+                    if(product.IsNew)
+                    {
+                        // Call an Insert Stored Procedure
+                    }
+                    else
+                    {
+                        // Call an Update Stored Procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -28,7 +28,7 @@ namespace ACM.BL
         //lub
 
         public override string ToString() => ProductName;
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 
