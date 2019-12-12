@@ -21,6 +21,13 @@ namespace ACM.BL
         public decimal? CurrentPrice { get; set; }
         public static int InstanceCount { get; set; }
 
+        /*public override string ToString()
+        {
+            return ProductName;
+        }*/
+        //lub
+
+        public override string ToString() => ProductName;
         public bool Validate()
         {
             bool isValid = true;

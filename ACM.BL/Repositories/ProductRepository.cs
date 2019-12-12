@@ -8,20 +8,18 @@ namespace ACM.BL
     {
         public Product Retrieve(int productId)
         {
-
+            var product = new Product(productId);
             if (productId == 1)
-            {
-                var product = new Product(productId)
                 {
-                    ProductName = "Komputer",
-                    Description = "Test Description",
-                    CurrentPrice = 12.55M
-                };
+                    product.ProductName = "Komputer";
+                    product.Description = "Test Description";
+                    product.CurrentPrice = 12.55M;
+                }
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
 
-                return product;
-            }
-
-            return null;
+            return product;
         }
 
         public List<Product> Retrieve()
