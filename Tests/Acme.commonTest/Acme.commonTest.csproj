@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03055BDD-FFB0-425B-B13E-E910B28B7BB4}</ProjectGuid>
+    <ProjectGuid>{05FEE1D3-8E6C-4E46-BF29-2C2F6F92A38B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACM.BLTest</RootNamespace>
-    <AssemblyName>ACM.BLTest</AssemblyName>
+    <RootNamespace>Acme.commonTest</RootNamespace>
+    <AssemblyName>Acme.commonTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,18 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerTest.cs" />
+    <Compile Include="StringHandlerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerRepositoryTest.cs" />
-    <Compile Include="ProductRepositoryTest.cs" />
-    <Compile Include="OrderRepositoryTest.cs" />
+    <Compile Include="LoggingServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ACM.BL\ACM.BL.csproj">
-      <Project>{30a2f209-c5f0-4e6f-ba1e-56180928cd53}</Project>
+      <Project>{30A2F209-C5F0-4E6F-BA1E-56180928CD53}</Project>
       <Name>ACM.BL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Acme.common\Acme.common.csproj">

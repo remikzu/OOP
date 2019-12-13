@@ -33,7 +33,6 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(State)) isValid = false;
             if (string.IsNullOrWhiteSpace(PostalCode)) isValid = false;
             if (string.IsNullOrWhiteSpace(Country)) isValid = false;
-            if (AddressType == null) isValid = false;
                
             return isValid;
         }

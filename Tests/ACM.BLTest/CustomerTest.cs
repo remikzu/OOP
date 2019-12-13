@@ -56,19 +56,16 @@ namespace ACM.BLTest
             {
                 FirstName = "Remigiusz"
             };
-            Customer.InstanceCount += 1;
 
             var c2 = new Customer
             {
                 FirstName = "Katarzyna"
             };
-            Customer.InstanceCount += 1;
 
             var c3 = new Customer
             {
                 FirstName = "Radoslaw"
             };
-            Customer.InstanceCount += 1;
 
             int expected = 3;
 

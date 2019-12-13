@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Acme.common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -16,7 +17,18 @@ namespace ACM.BL
             InstanceCount += 1;
         }
         public int ProductId { get; private set; }
-        public string ProductName { get; set; }
+        private string _productName;
+        public string ProductName
+        {
+            get
+            {
+                return _productName.InsertSpaces();
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
         public static int InstanceCount { get; set; }
@@ -28,6 +40,7 @@ namespace ACM.BL
         //lub
 
         public override string ToString() => ProductName;
+        public string Log() => $"{ProductId} {ProductName}, Price: {CurrentPrice}, Status: {EntityState.ToString()}";
         public override bool Validate()
         {
             bool isValid = true;

@@ -1,20 +1,21 @@
 ﻿using ACM.BL.EnumTypes;
+using Acme.common;
 using System;
 using System.Collections.Generic;
 
 namespace ACM.BL
 {
     
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         public Customer(): this(0)
         {
-
+            
         }
         public Customer(int customerId)
         {
-            CustomerId = customerId;
             InstanceCount += 1;
+            CustomerId = customerId;
             AddressList = new List<Address>();
         }
 
@@ -58,10 +59,7 @@ namespace ACM.BL
             return isValid;
         }
 
-        public Customer Retrieve(int customerId)
-        {
-            //TODO
-            return new Customer();
-        }
+        public string Log() =>
+            $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
     }
 }
