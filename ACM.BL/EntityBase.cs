@@ -1,14 +1,11 @@
-﻿using System;
+﻿using ACM.BL.EnumTypes;
+using System;
 using System.Collections.Generic;
 using System.Text;
-
+ 
 namespace ACM.BL
 {
-    public enum EntityStateOption
-    {
-        Active,
-        Deleted
-    }
+    
     public abstract class EntityBase
     {
         public EntityStateOption EntityState { get; set; }

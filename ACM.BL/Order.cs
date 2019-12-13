@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public Order() : this(0)
         {
@@ -24,7 +24,7 @@ namespace ACM.BL
         public int ShippingAddressId { get; set; }
         public override string ToString() => $"Order date: {OrderDate.Value.Date}, Id: {OrderId}";
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 

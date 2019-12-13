@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class OrderItem
+    public class OrderItem : EntityBase
     {
-        public OrderItem()
+        public OrderItem() : this(0)
         {
 
         }
@@ -19,8 +19,9 @@ namespace ACM.BL
         public int ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal? PurchasePrice { get; set; }
+        public override string ToString() => $"ProductId: {ProductId}, Qty: {Quantity}";
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 
@@ -31,22 +32,6 @@ namespace ACM.BL
             return isValid;
         }
 
-        public OrderItem Retrieve(int productId)
-        {
-            //TODO
-            return new OrderItem();
-        }
-
-        public List<OrderItem> Retrieve()
-        {
-            //TODO
-            return new List<OrderItem>();
-        }
-
-        public bool Save()
-        {
-            //TODO
-            return false;
-        }
+        
     }
 }

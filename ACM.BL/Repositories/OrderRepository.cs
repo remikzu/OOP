@@ -29,5 +29,30 @@ namespace ACM.BL
             return new List<Order>();
         }
 
+        public bool Save(Order order)
+        {
+            var success = true;
+
+            if (order.HasChanges)
+            {
+                if (order.isValid)
+                {
+                    if (order.IsNew)
+                    {
+                        // Call an Insert Stored Procedure
+                    }
+                    else
+                    {
+                        // Call an Update Stored Procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
+        }
+
     }
 }
